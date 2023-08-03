@@ -22,7 +22,9 @@ jobs:
   # This workflow contains a single job called "build"
   processPullRequest:
     if: github.event.pull_request
-    # The type of runner that the job will run on
+    permissions:
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Run a multi-line script
@@ -36,6 +38,8 @@ jobs:
           
   processIssue:
     if: github.event.issue
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
     steps:
         - name: Run a multi-line script
