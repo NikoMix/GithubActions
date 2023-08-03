@@ -26,7 +26,7 @@ async function run(){
             context: github.context
           };
 
-        core.debug('Payload: ' + payload);
+        core.debug('Payload: ' + JSON.stringify(payload));
 
         // Indicator will be removed from backend once the target is processed
         await indicateProcessing(octokit, repo, target);
