@@ -28,7 +28,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "${{ github.event.pull_request }}"
-
+      - name: Execute AI
+        uses: NikoMix/GithubActions@main
+        with:
+          endpoint: ${{ secrets.ENDPOINT }}
+          
   processIssue:
     if: github.event.issue
     runs-on: ubuntu-latest
@@ -36,3 +40,7 @@ jobs:
         - name: Run a multi-line script
           run: |
             echo "${{ github.event.issue }}"
+        - name: Execute AI
+          uses: NikoMix/GithubActions@main
+          with:
+           endpoint: ${{ secrets.ENDPOINT }}
