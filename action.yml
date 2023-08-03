@@ -4,6 +4,9 @@ inputs:
   endpoint:  # id of input
     description: 'API Endpoint with the proper Access Token'
     required: true
+  token:
+    description: Auth Token from the Workflow - or PAT for external repo
+    required: true
 #outputs: no outputs so far
   #time:  output will be available to future steps
   #  description: 'The current time after waiting'
