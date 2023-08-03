@@ -1,0 +1,10 @@
+name: Issue
+description: Raise an Issue you face with the product
+title: "[Issue]: "
+labels: ["issue", "triage"]
+assignees:
+- octocat
+body:
+- type: markdown
+  attributes:
+  value: ""

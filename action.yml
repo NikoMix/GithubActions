@@ -1,0 +1,12 @@
+name: 'reqairement'
+description: 'Pass events to the reqairement API'
+inputs:
+  endpoint:  # id of input
+    description: 'API Endpoint with the proper Access Token'
+    required: true
+#outputs: no outputs so far
+  #time:  output will be available to future steps
+  #  description: 'The current time after waiting'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
