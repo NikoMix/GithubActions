@@ -18,7 +18,7 @@ async function run(){
 
         const repo = github.context.repo;
         const target = github.context.payload.issue;
-        const endpoint = github.getInput("endpoint");
+        const endpoint = core.getInput("endpoint");
 
         const payload = {
             token: core.getInput("token"),
